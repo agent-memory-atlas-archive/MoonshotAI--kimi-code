@@ -1,5 +1,49 @@
 # @moonshot-ai/kimi-code
 
+## 1.0.0
+
+### Major Changes
+
+- [#3849](https://github.com/MoonshotAI/kimi-code/pull/3849) [`34ec5d2`](https://github.com/MoonshotAI/kimi-code/commit/34ec5d2a1700e540c39d2a1b6c905c9fa96af2db) Thanks [@wbxl2000](https://github.com/wbxl2000)! - Add the /desktop slash command (alias /install-desktop) and the kimi install-app subcommand to open the Kimi Code desktop app page in the browser.
+
+### Patch Changes
+
+- [#3838](https://github.com/MoonshotAI/kimi-code/pull/3838) [`f4e5822`](https://github.com/MoonshotAI/kimi-code/commit/f4e5822164800ec138f77b0f323e2374963bfe19) Thanks [@sailist](https://github.com/sailist)! - Fix an occasional crash when a running turn is canceled.
+
+- [#3802](https://github.com/MoonshotAI/kimi-code/pull/3802) [`c72a202`](https://github.com/MoonshotAI/kimi-code/commit/c72a20270e5078987a65e63b3741d8c778f4e02e) Thanks [@Grapedge](https://github.com/Grapedge)! - Highlight diff code blocks.
+
+- [#3844](https://github.com/MoonshotAI/kimi-code/pull/3844) [`0cf413f`](https://github.com/MoonshotAI/kimi-code/commit/0cf413f7759c314766ba30250a9875ac1af1185e) Thanks [@Grapedge](https://github.com/Grapedge)! - Fix a steered message appearing twice after interrupting the turn.
+
+- [#3848](https://github.com/MoonshotAI/kimi-code/pull/3848) [`b4d0b8a`](https://github.com/MoonshotAI/kimi-code/commit/b4d0b8a3889c1a6f0115c527341ccd2066bd180a) Thanks [@Grapedge](https://github.com/Grapedge)! - Fix @ file mentions duplicating or dropping the path when accepting a suggestion while still typing.
+
+- [#3828](https://github.com/MoonshotAI/kimi-code/pull/3828) [`2bb6e12`](https://github.com/MoonshotAI/kimi-code/commit/2bb6e12c7e3ecc19521d21fcffc832075ed13200) Thanks [@wbxl2000](https://github.com/wbxl2000)! - Fix duplicate user messages when steering an ongoing conversation.
+
+- [#3832](https://github.com/MoonshotAI/kimi-code/pull/3832) [`1c7e996`](https://github.com/MoonshotAI/kimi-code/commit/1c7e996aa8bdd7a6f32447f1d89e43c0646b41bc) Thanks [@chengluyu](https://github.com/chengluyu)! - Fix files attached while steering an ongoing conversation appearing only after a reload.
+
+- [#3832](https://github.com/MoonshotAI/kimi-code/pull/3832) [`1c7e996`](https://github.com/MoonshotAI/kimi-code/commit/1c7e996aa8bdd7a6f32447f1d89e43c0646b41bc) Thanks [@chengluyu](https://github.com/chengluyu)! - Fix slash commands sent while steering an ongoing conversation missing from the transcript.
+
+- [#3837](https://github.com/MoonshotAI/kimi-code/pull/3837) [`cafd9b5`](https://github.com/MoonshotAI/kimi-code/commit/cafd9b5a65509fe57332cbc0eb1fb19f0443fb0e) Thanks [@wbxl2000](https://github.com/wbxl2000)! - Fix missing and reappearing chat messages after undoing a steered message.
+
+- [#3818](https://github.com/MoonshotAI/kimi-code/pull/3818) [`19ce4b3`](https://github.com/MoonshotAI/kimi-code/commit/19ce4b3f0600c846e2f28828d8169829630fc666) Thanks [@liruifengv](https://github.com/liruifengv)! - Fix /usage showing a wrong error message when no session has been created yet.
+
+- [#3784](https://github.com/MoonshotAI/kimi-code/pull/3784) [`5653c73`](https://github.com/MoonshotAI/kimi-code/commit/5653c739b9c0dbafd1e4b3d36edeb0fe44ec71f4) Thanks [@7Sageer](https://github.com/7Sageer)! - Images sent to Kimi models are uploaded as file references instead of inline data, and a warning is shown when media are dropped from a retried request.
+
+- [#3778](https://github.com/MoonshotAI/kimi-code/pull/3778) [`7d174ac`](https://github.com/MoonshotAI/kimi-code/commit/7d174ac93352ccfc835d186ac7b8185d0194e6b5) Thanks [@huangzheng2016](https://github.com/huangzheng2016)! - Limit memory growth from finished subagents.
+
+- [#3778](https://github.com/MoonshotAI/kimi-code/pull/3778) [`7d174ac`](https://github.com/MoonshotAI/kimi-code/commit/7d174ac93352ccfc835d186ac7b8185d0194e6b5) Thanks [@huangzheng2016](https://github.com/huangzheng2016)! - Report background subagents that time out or are stopped as cancelled instead of failed.
+
+- [#3784](https://github.com/MoonshotAI/kimi-code/pull/3784) [`5653c73`](https://github.com/MoonshotAI/kimi-code/commit/5653c739b9c0dbafd1e4b3d36edeb0fe44ec71f4) Thanks [@7Sageer](https://github.com/7Sageer)! - When accumulated images and videos exceed the request size budget, the oldest media are omitted from requests with a warning instead of failing.
+
+- [#3778](https://github.com/MoonshotAI/kimi-code/pull/3778) [`7d174ac`](https://github.com/MoonshotAI/kimi-code/commit/7d174ac93352ccfc835d186ac7b8185d0194e6b5) Thanks [@huangzheng2016](https://github.com/huangzheng2016)! - Report tools and subagents interrupted by the user as cancelled instead of aborted or failed.
+
+- [#3803](https://github.com/MoonshotAI/kimi-code/pull/3803) [`39a7455`](https://github.com/MoonshotAI/kimi-code/commit/39a74556a662a96293e9838663e91b31dbdc7a0b) Thanks [@kimi-agent-bot](https://github.com/kimi-agent-bot)! - The built-in browser plugin now appears as "Kimi Browser Extension" in the plugins panel, marketplace catalog, and docs, matching the product rename.
+
+- [#3795](https://github.com/MoonshotAI/kimi-code/pull/3795) [`a7bdabb`](https://github.com/MoonshotAI/kimi-code/commit/a7bdabbe82a089cd8631f6d613c252d96cbab639) Thanks [@Grapedge](https://github.com/Grapedge)! - Feedback surveys now appear at better times in long conversations.
+
+- [#3833](https://github.com/MoonshotAI/kimi-code/pull/3833) [`8660a07`](https://github.com/MoonshotAI/kimi-code/commit/8660a07b3a0b7984971371d77f316e802e5e83fe) Thanks [@tpoisonooo](https://github.com/tpoisonooo)! - Fix tower worker cards wrongly showing "completed" during rework.
+
+- [#3840](https://github.com/MoonshotAI/kimi-code/pull/3840) [`9c5e9b4`](https://github.com/MoonshotAI/kimi-code/commit/9c5e9b48634be1dfae921fb48f9afc3a23ffd1ad) Thanks [@chengluyu](https://github.com/chengluyu)! - Fix a Windows crash when a project or config folder is opened through a short 8.3 path.
+
 ## 0.43.1
 
 ### Patch Changes
